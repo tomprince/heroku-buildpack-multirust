@@ -73,3 +73,6 @@ CARGO_HOME="$CACHE_DIR/cargo" cargo build --release
 
 log "Caching build artifacts"
 cp -r "$BUILD_DIR/target" "$CACHE_DIR/target"
+
+log "Cleaning build artifacts."
+rm -r "$BUILD_DIR/target/release/deps" "$BUILD_DIR/target/release/build"
